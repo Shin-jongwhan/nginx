@@ -1,6 +1,6 @@
 ### 241011
 ## nginx
-### 블로그 참고
+### 자세한 개념들과 내용은 아래 블로그 참고
 #### https://blog.naver.com/gi_balja/223028077537
 #### https://narup.tistory.com/238
 #### https://velog.io/@chickenfondue/nginx-docker-compose%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%A6%AC%EB%B2%84%EC%8A%A4-%ED%94%84%EB%A1%9D%EC%8B%9C-%EA%B5%AC%EC%84%B1
