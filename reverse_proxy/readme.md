@@ -5,4 +5,5 @@
 ### <br/><br/><br/>
 
 ## 설정 방법(docker)
-### 
+### docker hub에 따로 정리해놓았다.
+#### https://hub.docker.com/repository/docker/shinejh0528/nginx/general
