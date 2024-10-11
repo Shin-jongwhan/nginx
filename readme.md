@@ -23,11 +23,11 @@
 
 ## log
 ### 접속 로그 (Access Log)
-### /var/log/nginx/access.log
+#### /var/log/nginx/access.log
 ### <br/>
 
 ### 에러 로그 (Error Log)
-### /var/log/nginx/error.log
+#### /var/log/nginx/error.log
 ### <br/>
 
 ### 이 경로는 Nginx 설정 파일(/etc/nginx/nginx.conf 또는 개별 사이트 설정 파일)에서 access_log와 error_log를 통해 변경할 수 있다.
