@@ -1,8 +1,9 @@
 ### 241011
 ## nginx
 ### 블로그 참고
-#### ![image](https://github.com/user-attachments/assets/1e959229-2c9e-40cc-8001-b80aac039ac2)
+#### https://blog.naver.com/gi_balja/223028077537
 #### https://narup.tistory.com/238
+#### https://velog.io/@chickenfondue/nginx-docker-compose%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%A6%AC%EB%B2%84%EC%8A%A4-%ED%94%84%EB%A1%9D%EC%8B%9C-%EA%B5%AC%EC%84%B1
 ### <br/><br/><br/>
 
 ## 웹 서비스 workflow
@@ -16,3 +17,5 @@
 
 ## nginx 사용하는 이유
 ### 나는 리버스 프록시 기능이 필요해서 사용하려고 한다.
+### 한 서버에서 운영 서버와 dev 서버를 같이 관리하고 있는데 80포트가 하나 뿐인데 도메인에 따라서 포트포워딩 되게끔 만들고 싶었다.
+#### ![image](https://github.com/user-attachments/assets/6cb881de-8197-4055-bf21-7d5a07dc89ab)
