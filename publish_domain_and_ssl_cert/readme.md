@@ -150,9 +150,11 @@ python .\DCV_validation.py
 #### ![image](https://github.com/user-attachments/assets/0209c541-2161-4462-87d9-2b975eba07ac)
 ### <br/>
 
-### 여기까지 진행하면 2일 내로 발급이 다 된다고 하는데, 기다려봐야겠다. 
+### 여기까지 진행하면 2일 내로 발급이 다 된다고 하는데, 검증 요청 버튼을 누르면 바로 된다.
+#### ![image](https://github.com/user-attachments/assets/aaa7c0cb-30f0-44e6-8384-a62f02442d10)
 ### 발급되면 HTTPS 적용해서 web 개발하면 된다. 나는 AWS로 배포해볼까 생각도 해본다.
 #### ![image](https://github.com/user-attachments/assets/b50a8a3e-36be-4ae9-93cc-05d1591b169f)
+#### ![image](https://github.com/user-attachments/assets/33dffbb1-3397-46e1-950e-3bc1f2e24682)
 
 ### <br/><br/>
 
