@@ -158,6 +158,18 @@ python .\DCV_validation.py
 
 ### <br/><br/>
 
+## 로컬에서 도메인 주소 접속이 안 될 때
+### windows에서는 hosts 파일 설정을 해줘야 한다.
+#### C:\Windows\System32\drivers\etc\hosts 파일을 관리자 권한으로 열고 다음을 추가한다.
+```
+[IPv4 address] cognimosyne.com www.cognimosyne.com 
+```
+### <br/>
+
+### 그러면 로컬에서도 도메인으로 접속할 수 있다.
+#### ![image](https://github.com/user-attachments/assets/187d6831-a9f5-4e85-8fb2-925711400266)
+### <br/><br/>
+
 ## 보안 관련 참고사항
 ### 다양한 국가에서 간헐적으로 자주 접속 시도를 하는데, 보안 관련해서 정말 잘 설정해야겠다는 생각을 하게 된다.
 #### ![image](https://github.com/user-attachments/assets/82331fb9-80b9-425a-aa62-7711bbd25378)
