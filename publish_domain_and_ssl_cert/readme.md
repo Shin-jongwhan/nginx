@@ -27,8 +27,9 @@ BC0E8A90D83C3ABD92A651D5498421C47A510BF9041C18B40513FB00609381C4
 sectigo.com
 dcv20250515ae1db
 ```
-### <br/>
+### <br/><br/>
 
+## domain 구입 및 record 설정
 ### 그리고 구매한 도메인 사이트로 가서 관리 페이지에서 A record를 추가한다.
 ### 이렇게 하면 cognimosyne.com과 www.cognimosyne.com 둘 다 연결되게 하기 위해 다음 2가지를 추가해야 한다.
 #### 참고로 구매한 도메인 이름이 들어가는 게 아니다.
@@ -40,6 +41,27 @@ dcv20250515ae1db
 - 유형 : A record
 - 호스트 이름 : www
 - 값(주소) : public IP
+### 설정 후 바로 적용이 되는 게 아니라 DNS server에 전파해서 적용이 될 때까지 1~30분 정도 걸린다.
 #### ![image](https://github.com/user-attachments/assets/6ced1c59-d7e7-43c7-add0-1fd52ad086b0)
+### <br/><br/>
+
+## 포트포워딩 및 방화벽 설정
+### 먼저 windows라면 포트포워딩을 설정해야 한다.
+### 공유기 관리 홈페이지 가서 한다. 나는 KT 공유기 꺼라서 트래픽 관리 페이지에 가면 할 수 있었다.
+#### ![image](https://github.com/user-attachments/assets/02b32ec0-13d0-4617-b50b-1cc50f29e900)
 ### <br/>
+
+### 그리고 inbound 방화벽을 허용해야 한다.
+### 선택에 따라 다르지만 TCP만 허용해도 된다. 나는 그냥 TCP, UDP 둘 다 했다.
+#### ![image](https://github.com/user-attachments/assets/e99718cb-5e5d-4423-a36f-72e1124d8776)
+#### ![image](https://github.com/user-attachments/assets/43e613b7-040a-44b2-8ef6-eda2af85e624)
+#### ![image](https://github.com/user-attachments/assets/0f31ffaf-0600-48e4-914e-2073d9f0f6fd)
+#### ![image](https://github.com/user-attachments/assets/3d644ab0-164a-4be7-96c2-e8e7a6c4acb0)
+#### ![image](https://github.com/user-attachments/assets/a9e47ac1-b4f8-4ea3-a00d-efa86758d4ad)
+#### ![image](https://github.com/user-attachments/assets/de6c6819-12aa-4a35-8d47-4d89648f2a79)
+#### ![image](https://github.com/user-attachments/assets/d4baa954-ab5c-49a6-af46-6357b98259c5)
+### <br/>
+
+## nginx (web server) 및 web application 테스트
+
 
