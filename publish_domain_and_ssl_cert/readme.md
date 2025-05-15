@@ -46,7 +46,7 @@ dcv20250515ae1db
 ### <br/><br/>
 
 ## 포트포워딩 및 방화벽 설정
-### 먼저 windows라면 포트포워딩을 설정해야 한다.
+### 먼저 windows라면 포트포워딩을 설정해야 한다. 리눅스
 ### 공유기 관리 홈페이지 가서 한다. 나는 KT 공유기 꺼라서 트래픽 관리 페이지에 가면 할 수 있었다.
 #### ![image](https://github.com/user-attachments/assets/02b32ec0-13d0-4617-b50b-1cc50f29e900)
 ### <br/>
@@ -63,5 +63,83 @@ dcv20250515ae1db
 ### <br/>
 
 ## nginx (web server) 및 web application 테스트
+### 나는 이미 세팅한 nginx docker image가 있어서 그걸 사용했다. HTTP 접속을 위해서 80 포트를 연결한다.
+```
+run -itd -v C:\docker_volume\nginx:/data -p 80:80 --name nginx shinejh0528/nginx:1.1.0
+```
+### 사용 방법 참고
+#### https://hub.docker.com/r/shinejh0528/nginx
+### <br/>
 
+### nginx sites-available 수정
+```
+vi /etc/nginx/sites-available/default
+```
+#### <br/>
+
+### 다음과 같이 작성
+```
+server {
+    listen 80;
+    server_name cognimosyne.com www.cognimosyne.com;
+
+    location / {
+        proxy_pass http://[IPv4 address];
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+#### <br/>
+
+### nginx 재시작
+```
+service nginx restart
+# 또는 start 안 되어 있으면
+service nginx start
+```
+### <br/>
+
+### web application 테스트로 하나 구축한다. 나는 python으로 하였다.
+```
+from flask import Flask, send_from_directory
+import os
+
+app = Flask(__name__)
+
+@app.route('/.well-known/pki-validation/<filename>')
+def serve_validation_file(filename):
+    return send_from_directory('.well-known/pki-validation', filename)
+
+@app.route('/')
+def home():
+    return "Hello from Flask - cognimosyne.com!"
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=80)  # 또는 포트포워딩으로 공인 80포트 연결
+```
+#### <br/>
+
+### 그 다음 DVC 인증을 받기 위해 다운로드한 파일을 스크립트와 같은 경로에 저장한다.
+- ./.well-known/pki-validation/62BB07440AD17DB87CF701144CCA67B0.txt
+#### ![image](https://github.com/user-attachments/assets/e32e2191-337a-4cbc-9202-b4c48d60dca1)
+#### <br/>
+
+### web app 시작
+```
+python .\DCV_validation.py
+```
+#### ![image](https://github.com/user-attachments/assets/4959798e-cfbc-448a-be15-ac4e39af0427)
+### <br/>
+
+
+
+### <br/><br/>
+
+## 보안 관련 참고사항
+### 다양한 국가에서 간헐적으로 자주 접속 시도를 하는데, 보안 관련해서 정말 잘 설정해야겠다는 생각을 하게 된다.
+#### ![image](https://github.com/user-attachments/assets/82331fb9-80b9-425a-aa62-7711bbd25378)
+#### ![image](https://github.com/user-attachments/assets/98d183c4-80e3-421e-9c94-9adc970045d1)
 
