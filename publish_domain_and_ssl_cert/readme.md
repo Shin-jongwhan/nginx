@@ -134,7 +134,25 @@ python .\DCV_validation.py
 #### ![image](https://github.com/user-attachments/assets/4959798e-cfbc-448a-be15-ac4e39af0427)
 ### <br/>
 
+### 접속 테스트
+### 핸드폰에서도 잘 접속된다.
+#### http://cognimosyne.com/
+#### ![image](https://github.com/user-attachments/assets/d4553b40-05ef-455f-9787-98a29bfb5b3c)
+#### http://cognimosyne.com/.well-known/pki-validation/62BB07440AD17DB87CF701144CCA67B0.txt
+#### ![image](https://github.com/user-attachments/assets/a63327bd-22cb-442e-9570-c235db73706f)
+#### <br/>
 
+### DVC 인증 테스트
+### 아래 사이트에서 다시 돌아와서 인증 테스트를 한다.
+#### https://www.sslcert.co.kr/
+#### ![image](https://github.com/user-attachments/assets/36ed63c2-6dc9-4e61-9128-a9f996622cd7)
+#### ![image](https://github.com/user-attachments/assets/a597965c-27f0-4aad-84ee-7b996af09f6e)
+#### ![image](https://github.com/user-attachments/assets/0209c541-2161-4462-87d9-2b975eba07ac)
+### <br/>
+
+### 여기까지 진행하면 2일 내로 발급이 다 된다고 하는데, 기다려봐야겠다. 
+### 발급되면 HTTPS 적용해서 web 개발하면 된다. 나는 AWS로 배포해볼까 생각도 해본다.
+#### ![image](https://github.com/user-attachments/assets/b50a8a3e-36be-4ae9-93cc-05d1591b169f)
 
 ### <br/><br/>
 
