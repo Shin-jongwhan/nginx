@@ -1,3 +1,6 @@
+# 주소 이동됨
+#### https://github.com/Shin-jongwhan/network/tree/main/publish_domain_and_ssl_cert
+
 ### 250515
 ## SSL 인증서 발급하기
 ### 나는 여기서 하였다.
